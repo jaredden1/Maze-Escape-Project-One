@@ -6,5 +6,6 @@
 created this using Canva.
 
 ## Pseudocode
-WIP
+
+1
 
