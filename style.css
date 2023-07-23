@@ -1,3 +1,33 @@
-*{
-    box-sizing: border-box;
-};
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.maze-grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maze-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    border: solid green;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+} 
+
+
+
