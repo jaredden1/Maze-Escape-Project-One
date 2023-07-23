@@ -14,7 +14,7 @@ created this using Canva.
 ### 2. Define CSS styles in style.css 
 - Set styling for game grid and different elements/components w/in game (i.e. player, walls, path, etc.)
 ### 3. JS Game Logic Pseudocode
--  Create a naze grid using 2D array. I will be using nested arrays for this.
+-  Create a maze grid using 2D array. I will be using nested arrays for this.
 - Initialize variables (i.e. grid, timer, etc.)
 - create a function to generate maze grid game board
 - Define function to move player within the maze grid
