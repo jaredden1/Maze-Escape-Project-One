@@ -22,7 +22,19 @@ created this using Canva.
 - Create functions for win/loss conditions 
 - Remove player's ability to move through the maze when timer stops and game ends
 
-### 4. Some of the JS Methods I will likely be using:
+### 4. Functions: 
+- createMaze()
+  - this function renders maze layout and creates a grid of cells based on gridLayout. This function iterates through gridLayout and creates corresponding elements for each cells (i.e the path, wall, start and end") to each cell. 
+- gridLayout
+  - is an array which represents a specific type of cell for each element (i.e path, wall, start and end).
+- cells[] 
+  - empty array holds reference to each of the cell elements.
+- movePlayer(event)
+   - this function handles player's movement through the maze by tracking the arrow key presses. The player's current position is tracked by playerCurrentIndex variable. It also checks if the player can move in the desired direction without hitting a wall.
+-  createCountdownTimer()
+  - this function creates a countdown timer for the gameplay.
+
+### 5. Some of the JS Methods I will likely be using:
 
 - addEventListener()
 - removeEventListener
@@ -40,6 +52,6 @@ created this using Canva.
 - renderCountdown()
 - event.key (Key Property for keyboard interactions)
 
-### 5. Stretch Goals:
+### 6. Stretch Goals:
 - Add Audio
 - replace player dot with an image 
