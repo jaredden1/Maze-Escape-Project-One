@@ -51,6 +51,8 @@ const cells = []
 
 /*----------- state variables ------------*/
 
+// player start position
+let playerCurrentIndex = 28
 
 /*----------- cached elements ------------*/
 
@@ -65,12 +67,12 @@ const mazeGrid = document.querySelector('.maze-grid');
 
 // creating maze layout
 function createMaze() {
-
+    
     for (let i = 0; i < gridLayout.length; i++) {
         const cell = document.createElement('div');
         mazeGrid.appendChild(cell);
         cells.push(cell);
-
+        
         if (gridLayout[i] === 0) {
             cells[i].classList.add('path');
         } else if (gridLayout[i] === 1) {
@@ -83,3 +85,7 @@ function createMaze() {
     }
 }
 createMaze();
+
+// creating player
+cells[playerCurrentIndex].classList.add('player');
+
