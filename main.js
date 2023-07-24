@@ -62,6 +62,8 @@ const mazeGrid = document.querySelector('.maze-grid');
 
 /*----------- event listeners ------------*/
 
+document.addEventListener('keydown', movePlayer);
+
 
 /*-------------- functions ---------------*/
 
@@ -86,6 +88,37 @@ function createMaze() {
 }
 createMaze();
 
+
+function movePlayer(event) {
+    cells[playerCurrentIndex].classList.remove('player');
+
+ switch (event.key) {
+     case 'ArrowUp':
+        if (playerCurrentIndex - width >= 0 && gridLayout[playerCurrentIndex - width] !== 1) {
+            playerCurrentIndex -= width;
+        }
+        break;
+     case 'ArrowDown':
+        if (playerCurrentIndex + width < gridLayout.length && gridLayout[playerCurrentIndex + width] !== 1) {
+            playerCurrentIndex += width;
+        }
+        break;
+     case 'ArrowLeft':
+        if (playerCurrentIndex % width !== 0 && gridLayout[playerCurrentIndex - 1] !== 1) {
+            playerCurrentIndex -= 1;
+        }
+        break;
+     case 'ArrowRight':
+        if (playerCurrentIndex % width < width - 1 && gridLayout[playerCurrentIndex + 1] !== 1) {
+            playerCurrentIndex += 1;
+        }
+        break;
+    default:
+        break;
+
+    }
+    cells[playerCurrentIndex].classList.add('player');
+}
+
 // creating player
 cells[playerCurrentIndex].classList.add('player');
-
