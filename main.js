@@ -7,7 +7,7 @@ console.log('js:loaded');
 
 const width = 28;
 
-// maze layout array.
+// render maze layout array.
 // path = 0
 // wall = 1
 // start = 2
@@ -67,7 +67,7 @@ document.addEventListener('keydown', movePlayer);
 
 /*-------------- functions ---------------*/
 
-// creating maze layout
+// render maze layout
 function createMaze() {
     
     for (let i = 0; i < gridLayout.length; i++) {
@@ -120,5 +120,10 @@ function movePlayer(event) {
     cells[playerCurrentIndex].classList.add('player');
 }
 
-// creating player
+// render player
 cells[playerCurrentIndex].classList.add('player');
+
+// render countdown timer
+function createCountdownTimer() {
+    
+}
