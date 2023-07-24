@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: linear-gradient(rgb(65, 215, 238), rgb(101, 243, 108));
 }
 
 header {
