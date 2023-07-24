@@ -1,19 +1,26 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
 
-.title {
+header {
     text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px 0;
 }
 
 .maze-grid-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .maze-grid {
@@ -24,10 +31,25 @@ body {
     border: solid green;
 }
 
-.grid div {
+.maze-grid div {
     width: 20px;
     height: 20px;
 } 
 
+.path {
+    background-color: white;
+}
+
+.wall {
+    background-color: black;
+}
+
+.start {
+    background-color: blue;
+}
+
+.end {
+    background-color: red;
+}
 
 
