@@ -30,9 +30,11 @@ created this using Canva.
 - cells[] 
   - empty array holds reference to each of the cell elements.
 - movePlayer(event)
-   - this function handles player's movement through the maze by tracking the arrow key presses. The player's current position is tracked by playerCurrentIndex variable. It also checks if the player can move in the desired direction without hitting a wall.
--  createCountdownTimer()
-  - this function creates a countdown timer for the gameplay.
+  - this function handles player's movement through the maze by tracking the arrow key presses. The player's current position is tracked by playerCurrentIndex variable. It also checks if the player can move in the desired direction without hitting a wall.
+- function createCountdownTimer(callback)
+  - pseudocode WIP (will be updating all pseudocode this evening to proper format)
+  -  
+
 
 ### 5. Some of the JS Methods I will likely be using:
 

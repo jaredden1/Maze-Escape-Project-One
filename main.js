@@ -46,9 +46,6 @@ const gridLayout = [
 
 const cells = []
 
-
-
-
 /*----------- state variables ------------*/
 
 // player start position
@@ -57,13 +54,11 @@ let playerCurrentIndex = 28
 /*----------- cached elements ------------*/
 
 const mazeGrid = document.querySelector('.maze-grid');
-
-
+const timerEl = document.getElementById('countdown-timer');
 
 /*----------- event listeners ------------*/
 
 document.addEventListener('keydown', movePlayer);
-
 
 /*-------------- functions ---------------*/
 
@@ -125,6 +120,18 @@ function movePlayer(event) {
 cells[playerCurrentIndex].classList.add('player');
 
 // render countdown timer
-function createCountdownTimer() {
-    
+function createCountdownTimer(callback) {
+    let count = 60;
+    const interval = setInterval(function() {
+        count--;
+    timerEl.innerText = `Time left: ${count}s`;
+    if (count <= 0) {
+        clearInterval(interval);
+        callback();
+    }
+  }, 1000);
 }
+
+createCountdownTimer(function() {
+    alert('Time is up! Game over!');
+});
