@@ -124,7 +124,7 @@ function createCountdownTimer(callback) {
     let count = 60;
     const interval = setInterval(function() {
         count--;
-    timerEl.innerText = `Time left: ${count}s`;
+    timerEl.innerText = `00 : ${count}`;
     if (count <= 0) {
         clearInterval(interval);
         callback();

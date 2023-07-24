@@ -11,11 +11,21 @@ body {
 header {
     text-align: center;
     font-size: 28px;
-    
+    font-family: Helvetica;
 }
 
 h1 {
     margin-bottom: 20px 0;
+}
+
+#countdown-timer {
+    font-family: Helvetica, sans-serif;
+    padding: 10px 15px;
+    font-size: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(233, 230, 230);
+    background-color: black;
 }
 
 .start-text {
