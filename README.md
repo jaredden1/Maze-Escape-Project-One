@@ -17,6 +17,7 @@ A maze game is a type of a game where a player navigates from a starting point, 
 3. StackOverflow
 4. Switch: detecting arrow key presses: https://www.tutorialspoint.com/detecting-arrow-key-presses-in-javascript#:~:text=The%20key%20codes%20for%20the,arrow%20key%20presses%20in%20JavaScript.
 5. Break: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break
+6. Color gradient: https://www.w3schools.com/css/css3_gradients.asp
 
 ## Getting Started
 

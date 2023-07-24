@@ -88,7 +88,7 @@ function createMaze() {
 }
 createMaze();
 
-
+// player movement with arrow keys
 function movePlayer(event) {
     cells[playerCurrentIndex].classList.remove('player');
 

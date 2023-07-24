@@ -9,11 +9,11 @@ created this using Canva.
 
 
 
-### 1. Set up HTML Structure
+### 1. Set up HTML Structure:
 - Create a html container with class "grid" for the game board
-### 2. Define CSS styles in style.css 
+### 2. Define CSS styles in style.css:
 - Set styling for game grid and different elements/components w/in game (i.e. player, walls, path, etc.)
-### 3. JS Game Logic Pseudocode
+### 3. JS Game Logic Pseudocode:
 -  Create a maze grid using 2D array. I will be using nested arrays for this.
 - Initialize variables (i.e. grid, timer, etc.)
 - create a function to generate maze grid game board
@@ -39,3 +39,7 @@ created this using Canva.
 - renderWinner()
 - renderCountdown()
 - event.key (Key Property for keyboard interactions)
+
+### 5. Stretch Goals:
+- Add Audio
+- replace player dot with an image 
