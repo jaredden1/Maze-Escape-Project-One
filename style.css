@@ -31,7 +31,7 @@ h1 {
     flex-wrap: wrap;
     width: 560px;
     height: 560px;
-    border: solid rgb(111, 135, 111);
+    border: none;
 }
 
 .maze-grid div {
@@ -40,7 +40,7 @@ h1 {
 } 
 
 .path {
-    background-color: white;
+    background-color: linear-gradient(90deg, rgb(22, 138, 166), rgb(104, 200, 81));
 }
 
 .wall {
@@ -58,7 +58,6 @@ h1 {
 .player {
     background-color: rgb(246, 137, 3);
     border-radius: 20px;
-    
 }
 
 

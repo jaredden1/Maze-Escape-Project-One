@@ -7,7 +7,7 @@ console.log('js:loaded');
 
 const width = 28;
 
-// Initial maze layout array.
+// maze layout array.
 // path = 0
 // wall = 1
 // start = 2
