@@ -86,6 +86,7 @@ function createMaze() {
         } 
     }
 }
+
 createMaze();
 
 // player movement with arrow keys

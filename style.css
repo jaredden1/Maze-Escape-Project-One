@@ -18,6 +18,24 @@ h1 {
     margin-bottom: 20px 0;
 }
 
+.start-text {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    top: 10px;
+    left: 10px;
+}
+
+.end-text {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    bottom: 10px;
+    right: 10px;
+}
+
 .maze-grid-container {
     display: flex;
     justify-content: center;
