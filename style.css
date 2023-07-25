@@ -12,6 +12,8 @@ header {
     text-align: center;
     font-size: 28px;
     font-family: Helvetica;
+    color: rgb(2, 248, 2);
+    text-shadow: black 1px 1px 15px;
 }
 
 h1 {
@@ -22,6 +24,7 @@ P {
     font-family: Helvetica;
     font-size: 20px;
     font-weight: bold;
+    text-shadow: white 1px 1px 3px;
 }
 
 button {

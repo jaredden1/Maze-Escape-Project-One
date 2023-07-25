@@ -164,7 +164,7 @@ function startGame() {
 // render player win/lose
 function playerWins() {
     gameOver = true;
-    alert('Congratulations! You Have Escaped The Maze');
+    alert('Congratulations! You Have Escaped The Maze!!!');
     resetGame();
 }
 function playerLoses() {
