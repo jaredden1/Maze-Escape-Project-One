@@ -27,7 +27,7 @@ const gridLayout = [
     1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,
     1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,1,
     1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,
-    1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,1,
+    1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,
     1,0,1,0,1,0,1,1,1,1,1,1,0,1,0,1,0,0,1,1,1,0,1,0,1,1,1,1,
     1,0,1,0,1,0,0,0,0,0,0,1,0,1,0,1,1,1,1,0,1,0,1,0,0,0,0,1,
     1,0,1,0,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,1,
@@ -79,8 +79,14 @@ function createMaze() {
             cells[i].classList.add('wall');
         } else if (gridLayout[i] === 2) {
             cells[i].classList.add('start');
+            const startText = document.createElement('div');
+            startText.textContent = 'START';
+            cells[i].appendChild(startText);
         } else if (gridLayout[i] === 3) {
             cells[i].classList.add('end');
+            const endText = document.createElement('div');
+            endText.textContent = 'END';
+            cells[i].appendChild(endText);
         } 
     }
 }
