@@ -74,13 +74,15 @@ button {
     background-color: black;
 }
 
-.start {
+.startTxt {
     font-family: Helvetica;
+    font-weight: bold;
     color: rgb(249, 208, 132);
 }
 
-.end {
+.endTxt {
     font-family: Helvetica;
+    font-weight: bold;
     color: rgb(249, 208, 132);
 }
 

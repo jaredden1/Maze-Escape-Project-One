@@ -12,10 +12,12 @@ const width = 28;
 // wall = 1
 // start = 2
 // end = 3
+// startTxt = 4
+// endTxt = 5
 
 const gridLayout = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-    2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,
+    4,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,
     1,1,1,1,1,1,1,0,1,0,1,0,1,1,1,0,1,1,1,1,1,1,0,1,0,1,0,1,
     1,0,0,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,1,0,1,0,1,0,1,
     1,0,1,1,1,1,1,0,1,0,1,1,1,0,1,0,1,1,1,1,0,1,0,1,0,1,0,1,
@@ -40,7 +42,7 @@ const gridLayout = [
     1,0,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,0,1,0,1,0,1,1,0,1,0,1,
     1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,
     1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,
-    1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,3,
+    1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,5,3,
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]
 
@@ -50,6 +52,7 @@ const cells = []
 
 // render player start position
 let playerCurrentIndex = 28
+let gameOver = false;
 
 /*----------- cached elements ------------*/
 
@@ -79,15 +82,19 @@ function createMaze() {
             cells[i].classList.add('wall');
         } else if (gridLayout[i] === 2) {
             cells[i].classList.add('start');
+        } else if (gridLayout[i] === 3) {
+            cells[i].classList.add('end');
+        } else if (gridLayout[i] === 4) {
+            cells[i].classList.add('startTxt');
             const startText = document.createElement('div');
             startText.textContent = 'START';
             cells[i].appendChild(startText);
-        } else if (gridLayout[i] === 3) {
-            cells[i].classList.add('end');
-            const endText = document.createElement('div');
-            endText.textContent = 'END';
-            cells[i].appendChild(endText);
-        } 
+        } else if (gridLayout[i] === 5) {
+            cells[i].classList.add('endTxt');
+            const startText = document.createElement('div');
+            startText.textContent = 'END';
+            cells[i].appendChild(startText);
+        }      
     }
 }
 
@@ -133,11 +140,11 @@ cells[playerCurrentIndex].classList.add('player');
 
 // render countdown timer
 function createCountdownTimer(callback) {
-    let count = 6;
+    let count = 60;
     const interval = setInterval(function() {
         count--;
     timerEl.innerText = `00 : ${count}`;
-    if (count <= 0) {
+    if (count <= 0 && !gameOver) {
         clearInterval(interval);
         callback();
     }
@@ -151,17 +158,17 @@ function startGame() {
     timerEl.style.display = 'block';
     createCountdownTimer(function() {
         playerLoses();
-        resetGame()
+        gameOver = false;
     });
 }
-
 // render player win/lose
 function playerWins() {
+    gameOver = true;
     alert('Congratulations! You Have Escaped The Maze');
     resetGame();
 }
-
 function playerLoses() {
+    gameOver = true;
     alert('Time Is Up! Game Over! Better Luck Next Time!');
     resetGame();
 }
@@ -169,8 +176,10 @@ function playerLoses() {
 function resetGame() {
     cells[playerCurrentIndex].classList.remove('player');
 
+    playerCurrentIndex = 28;
     timerEl.style.display = 'none';
     mazeGrid.style.display = 'none';
-    startEl.style.display = 'none';
+    startEl.style.display = 'flex';
+    
+    cells[playerCurrentIndex].classList.add('player');
 }
-
