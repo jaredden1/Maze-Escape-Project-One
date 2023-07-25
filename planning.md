@@ -53,7 +53,7 @@ function movePlayer(event): registers arrow key press to move player within the 
 //Function to create countdown timer:
 function createCountdownTimer(callback): initialize countdown timer and update timer element
 
-### 5. Some of the JS Methods I will likely be using:
+### 6. Some of the JS Methods I will likely be using:
 
 - addEventListener()
 - removeEventListener
