@@ -49,8 +49,8 @@ button {
     color: rgb(233, 230, 230);
     background-color: black;
     position: relative;
-    top: 80px;
-    left: 360px;
+    top: 60px;
+    left: 365px;
 }
 
 .start-text {
@@ -71,16 +71,8 @@ button {
     right: 10px;
 }
 
-.maze-grid-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
 .maze-grid {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     width: 560px;
     height: 560px;

@@ -135,11 +135,14 @@ function createCountdownTimer(callback) {
   }, 1000);
 }
 
+// render start game
 function startGame() {
     startEl.style.display = 'none';
     mazeGrid.style.display = 'flex';
     timerEl.style.display = 'block';
     createCountdownTimer(function() {
         alert('Time is up! Game over!');
-});
+    });
 }
+
+
