@@ -151,15 +151,26 @@ function startGame() {
     timerEl.style.display = 'block';
     createCountdownTimer(function() {
         playerLoses();
+        resetGame()
     });
 }
 
 // render player win/lose
 function playerWins() {
-    alert('Congratulations! You Escaped The Maze');
+    alert('Congratulations! You Have Escaped The Maze');
+    resetGame();
 }
 
 function playerLoses() {
-    alert('Time Is Up! Game Over!');
+    alert('Time Is Up! Game Over! Better Luck Next Time!');
+    resetGame();
+}
+// render game reset
+function resetGame() {
+    cells[playerCurrentIndex].classList.remove('player');
+
+    timerEl.style.display = 'none';
+    mazeGrid.style.display = 'none';
+    startEl.style.display = 'none';
 }
 
