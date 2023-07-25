@@ -120,7 +120,10 @@ function movePlayer(event) {
         break;
     default:
         break;
-
+    } 
+    if (gridLayout[playerCurrentIndex] === 3) {
+        playerWins();
+        return;
     }
     cells[playerCurrentIndex].classList.add('player');
 }
@@ -130,7 +133,7 @@ cells[playerCurrentIndex].classList.add('player');
 
 // render countdown timer
 function createCountdownTimer(callback) {
-    let count = 60;
+    let count = 6;
     const interval = setInterval(function() {
         count--;
     timerEl.innerText = `00 : ${count}`;
@@ -147,8 +150,16 @@ function startGame() {
     mazeGrid.style.display = 'flex';
     timerEl.style.display = 'block';
     createCountdownTimer(function() {
-        alert('Time is up! Game over!');
+        playerLoses();
     });
 }
 
+// render player win/lose
+function playerWins() {
+    alert('Congratulations! You Escaped The Maze');
+}
+
+function playerLoses() {
+    alert('Time Is Up! Game Over!');
+}
 
