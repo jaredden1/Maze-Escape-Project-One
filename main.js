@@ -48,7 +48,7 @@ const cells = []
 
 /*----------- state variables ------------*/
 
-// player start position
+// render player start position
 let playerCurrentIndex = 28
 
 /*----------- cached elements ------------*/
@@ -84,7 +84,7 @@ function createMaze() {
 
 createMaze();
 
-// player movement with arrow keys
+// render player movement with arrow keys
 function movePlayer(event) {
     cells[playerCurrentIndex].classList.remove('player');
 
