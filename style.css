@@ -18,6 +18,28 @@ h1 {
     margin-bottom: 50px 0;
 }
 
+P {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 5px;
+
+}
+
+#start-prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+}
+
 #countdown-timer {
     font-family: Helvetica, sans-serif;
     padding: 10px 15px;
@@ -35,7 +57,7 @@ h1 {
     font-size: 20px;
     font-weight: bold;
     color: black;
-    position: fixed;
+    position: absolute;
     top: 260px;
     left: 160px;
 }
@@ -49,7 +71,8 @@ h1 {
     right: 163px;
 }
 
-.maze-grid-container {
+.maze-grid-container, 
+#countdown-timer {
     display: flex;
     justify-content: center;
     align-items: center;
