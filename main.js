@@ -55,10 +55,13 @@ let playerCurrentIndex = 28
 
 const mazeGrid = document.querySelector('.maze-grid');
 const timerEl = document.getElementById('countdown-timer');
+const startEl = document.getElementById('start-prompt');
+const startBtn = document.getElementById('start-game');
 
 /*----------- event listeners ------------*/
 
 document.addEventListener('keydown', movePlayer);
+startBtn.addEventListener('click', startGame);
 
 /*-------------- functions ---------------*/
 
@@ -132,6 +135,11 @@ function createCountdownTimer(callback) {
   }, 1000);
 }
 
-createCountdownTimer(function() {
-    alert('Time is up! Game over!');
+function startGame() {
+    startEl.style.display = 'none';
+    mazeGrid.style.display = 'flex';
+    timerEl.style.display = 'block';
+    createCountdownTimer(function() {
+        alert('Time is up! Game over!');
 });
+}

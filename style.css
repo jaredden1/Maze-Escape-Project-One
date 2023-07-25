@@ -29,7 +29,6 @@ button {
     font-weight: bold;
     font-size: 30px;
     border-radius: 5px;
-
 }
 
 #start-prompt {
@@ -41,7 +40,8 @@ button {
 }
 
 #countdown-timer {
-    font-family: Helvetica, sans-serif;
+    display: none;
+    font-family: Helvetica;
     padding: 10px 15px;
     font-size: 35px;
     border-radius: 5px;
@@ -58,8 +58,8 @@ button {
     font-weight: bold;
     color: black;
     position: absolute;
-    top: 260px;
-    left: 160px;
+    top: 10px;
+    left: 10px;
 }
 
 .end-text {
@@ -67,13 +67,12 @@ button {
     font-weight: bold;
     color: black;
     position: absolute;
-    bottom: 39px;
-    right: 163px;
+    bottom: 10px;
+    right: 10px;
 }
 
-.maze-grid-container, 
-#countdown-timer {
-    display: flex;
+.maze-grid-container {
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
