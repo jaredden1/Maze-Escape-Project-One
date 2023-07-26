@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Squartiqa';
+  src: url(./fonts/Squartiqa4FStripes.otf)
+}
+
+@font-face {
+  font-family: 'UltraLight';
+  src: url(./fonts/Squartiqa4FUltraLight.otf)
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -14,10 +24,10 @@ body {
 
 header {
   text-align: center;
-  font-size: 28px;
-  font-family: Helvetica;
+  font-size: 30px;
+  font-family: Squartiqa;
   color: rgb(2, 248, 2);
-  text-shadow: black 1px 1px 15px;
+  text-shadow: rgb(238, 35, 92) 5px 3px 2px;
 }
 
 h1 {
@@ -25,17 +35,45 @@ h1 {
 }
 
 P {
-  font-family: Helvetica;
+  font-family: Squartiqa;
   font-size: 20px;
-  font-weight: bold;
-  text-shadow: white 1px 1px 3px;
+  text-shadow: rgb(136, 243, 146) 2px 2px 1px;
 }
 
 button {
-  font-family: Helvetica;
-  font-weight: bold;
+  font-family: ultraLight;
   font-size: 30px;
   border-radius: 5px;
+  background-color: white;
+  text-shadow: rgb(250, 252, 250) 2px 2px 1px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  position: relative;
+}
+
+a span {
+  position: relative;
+  z-index: 2;
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(238, 35, 92);
+  transition: all .75s;
+}
+
+a:hover:after {
+  width: 100%;
 }
 
 #start-prompt {
@@ -66,6 +104,7 @@ button {
   width: 560px;
   height: 560px;
   border: none;
+  text-shadow: rgb(243, 8, 24) 2px 1px 2px;
 }
 
 .maze-grid div {
@@ -88,16 +127,21 @@ button {
 .startTxt {
   font-family: Helvetica;
   font-weight: bold;
-  color: rgb(249, 208, 132);
+  color: rgb(245, 210, 144);
 }
 
 .endTxt {
   font-family: Helvetica;
   font-weight: bold;
-  color: rgb(249, 208, 132);
+  color: rgb(245, 210, 144);
 }
 
 .player {
-  background-color: rgb(246, 137, 3);
-  border-radius: 20px;
+  background-image: url('./playerImg.png');
+  background-size: cover;
+  background-position: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 0px;
+  text-shadow: rgb(94, 247, 92) 1px 2px 1px;
 }

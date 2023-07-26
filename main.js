@@ -57,6 +57,7 @@ const mazeGrid = document.querySelector(".maze-grid");
 const timerEl = document.getElementById("countdown-timer");
 const startEl = document.getElementById("start-prompt");
 const startBtn = document.getElementById("start-game");
+const playerImage = document.createElement('img');
 
 /*----------- event listeners ------------*/
 
@@ -146,7 +147,11 @@ function movePlayer(event) {
   cells[playerCurrentIndex].classList.add("player");
 }
 
-// render player
+// render player and added an image for player
+playerImage.src = './playerImg.png';
+playerImage.classList.add('player');
+
+cells[playerCurrentIndex].appendChild(playerImage);
 cells[playerCurrentIndex].classList.add("player");
 
 // render countdown timer

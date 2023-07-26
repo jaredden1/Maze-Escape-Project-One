@@ -36,3 +36,8 @@ In this section include the link to your deployed game and any instructions you 
 1. Adding obstacles in the maze for a more challenging experience
 2. Adding a second level that player can move onto if player wins
 3. Adding a point system which will allow player to collect items that are worth points while trying to reach the end point under timed conditions.
+
+## Credit:
+Custom font: https://allbestfonts.com/squartiqa-4f/#google_vignette
+
+Play Button hover (I looked at their code but I ended up modifying it): https://codepen.io/thelaazyguy/pen/brryVq
