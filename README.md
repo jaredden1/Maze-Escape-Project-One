@@ -12,6 +12,10 @@ A maze game is a type of a game where a player navigates from a starting point, 
 ![Alt text](image-2.png)
 ![Alt text](image-1.png)
 
+#### Stretch Goal Screenshots
+![Alt text](image.png)
+![Alt text](image-3.png)
+
 ## Technologies Used
 
 *  HTML
