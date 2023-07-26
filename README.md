@@ -41,3 +41,5 @@ In this section include the link to your deployed game and any instructions you 
 Custom font: https://allbestfonts.com/squartiqa-4f/#google_vignette
 
 Play Button hover (I looked at their code but I ended up modifying it): https://codepen.io/thelaazyguy/pen/brryVq
+
+Audio credit: https://mixkit.co/free-sound-effects/game/
