@@ -4,7 +4,7 @@ console.log('js:loaded');
 
 
 /*-------------- constants ---------------*/
-
+//player start position
 const width = 28;
 
 // render maze layout array.
@@ -75,7 +75,7 @@ function createMaze() {
         const cell = document.createElement('div');
         mazeGrid.appendChild(cell);
         cells.push(cell);
-        
+// add class to cell based on value in gridLayout to create paths, wall, etc.
         if (gridLayout[i] === 0) {
             cells[i].classList.add('path');
         } else if (gridLayout[i] === 1) {
@@ -104,6 +104,7 @@ createMaze();
 function movePlayer(event) {
     cells[playerCurrentIndex].classList.remove('player');
 
+//render player movement based on arrow key pressed. 
  switch (event.key) {
      case 'ArrowUp':
         if (playerCurrentIndex - width >= 0 && gridLayout[playerCurrentIndex - width] !== 1) {
@@ -128,10 +129,12 @@ function movePlayer(event) {
     default:
         break;
     } 
+//Check if player has reached the end of maze
     if (gridLayout[playerCurrentIndex] === 3) {
         playerWins();
         return;
     }
+//Add player back to new position
     cells[playerCurrentIndex].classList.add('player');
 }
 
@@ -174,12 +177,15 @@ function playerLoses() {
 }
 // render game reset
 function resetGame() {
+//remove player from current position
     cells[playerCurrentIndex].classList.remove('player');
-
+//resets player back to beginning position
     playerCurrentIndex = 28;
+//hide countdown timer, maze grid
     timerEl.style.display = 'none';
     mazeGrid.style.display = 'none';
+//make start button visible 
     startEl.style.display = 'flex';
-    
+//add player to its position
     cells[playerCurrentIndex].classList.add('player');
 }
