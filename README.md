@@ -9,8 +9,8 @@ A maze game is a type of a game where a player navigates from a starting point, 
 ## Gameplay - Screenshots
 
 #### MVP Screenshots:
-![Image1](../Maze%20Escape%20|%20Project%20One/assets/image-1.png)
-![Image2](../Maze%20Escape%20|%20Project%20One/assets/image-2.png)
+![Img1](../Maze%20Escape%20Project%20One/assets/Image1.png)
+![Img2](../Maze%20Escape%20Project%20One/assets/Image2.png)
 
 ## Technologies Used
 
