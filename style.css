@@ -1,95 +1,103 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-image: linear-gradient(90deg, rgb(22, 138, 166), rgb(104, 200, 81));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgb(22, 138, 166),
+    rgb(104, 200, 81)
+  );
 }
 
 header {
-    text-align: center;
-    font-size: 28px;
-    font-family: Helvetica;
-    color: rgb(2, 248, 2);
-    text-shadow: black 1px 1px 15px;
+  text-align: center;
+  font-size: 28px;
+  font-family: Helvetica;
+  color: rgb(2, 248, 2);
+  text-shadow: black 1px 1px 15px;
 }
 
 h1 {
-    margin-bottom: 50px 0;
+  margin-bottom: 50px 0;
 }
 
 P {
-    font-family: Helvetica;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: white 1px 1px 3px;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: white 1px 1px 3px;
 }
 
 button {
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 30px;
-    border-radius: 5px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 5px;
 }
 
 #start-prompt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
 }
 
 #countdown-timer {
-    display: none;
-    font-family: Helvetica;
-    padding: 10px 15px;
-    font-size: 35px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: rgb(233, 230, 230);
-    background-color: black;
-    position: relative;
-    top: 60px;
-    left: 365px;
+  display: none;
+  font-family: Helvetica;
+  padding: 10px 15px;
+  font-size: 35px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgb(233, 230, 230);
+  background-color: black;
+  position: relative;
+  top: 60px;
+  left: 365px;
 }
 
 .maze-grid {
-    display: none;
-    flex-wrap: wrap;
-    width: 560px;
-    height: 560px;
-    border: none;
+  display: none;
+  flex-wrap: wrap;
+  width: 560px;
+  height: 560px;
+  border: none;
 }
 
 .maze-grid div {
-    width: 20px;
-    height: 20px;
-} 
+  width: 20px;
+  height: 20px;
+}
 
 .path {
-    background-color: linear-gradient(90deg, rgb(22, 138, 166), rgb(104, 200, 81));
+  background-color: linear-gradient(
+    90deg,
+    rgb(22, 138, 166),
+    rgb(104, 200, 81)
+  );
 }
 
 .wall {
-    background-color: black;
+  background-color: black;
 }
 
 .startTxt {
-    font-family: Helvetica;
-    font-weight: bold;
-    color: rgb(249, 208, 132);
+  font-family: Helvetica;
+  font-weight: bold;
+  color: rgb(249, 208, 132);
 }
 
 .endTxt {
-    font-family: Helvetica;
-    font-weight: bold;
-    color: rgb(249, 208, 132);
+  font-family: Helvetica;
+  font-weight: bold;
+  color: rgb(249, 208, 132);
 }
 
 .player {
-    background-color: rgb(246, 137, 3);
-    border-radius: 20px;
+  background-color: rgb(246, 137, 3);
+  border-radius: 20px;
 }
