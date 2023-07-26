@@ -2,7 +2,7 @@
 
 ## Wireframe
 
-![Alt text](image.png)
+![image](../assets/image.png)
 created this using Canva.
 
 ## Pseudocode 
