@@ -200,7 +200,7 @@ function playerWins() {
   winMessage.style.display = 'block';
   setTimeout(function() {
     winMessage.style.display = 'none';
-  }, 10000);
+  }, 6000);
   resetGame();
 }
 function playerLoses() {
@@ -209,7 +209,7 @@ function playerLoses() {
   loseMessage.style.display = "block";
   setTimeout(function() {
     loseMessage.style.display = 'none';
-  }, 10000);
+  }, 6000);
   resetGame();
 }
 // render game reset
