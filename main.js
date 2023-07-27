@@ -62,6 +62,8 @@ const timerEl = document.getElementById("countdown-timer");
 const startEl = document.getElementById("start-prompt");
 const startBtn = document.getElementById("start-game");
 const playerImage = document.createElement("img");
+const winMessage = document.getElementById("win-message");
+const loseMessage = document.getElementById("lose-message");
 
 /*----------- event listeners ------------*/
 
@@ -165,7 +167,7 @@ cells[playerCurrentIndex].classList.add("player");
 
 // render countdown timer
 function createCountdownTimer(callback) {
-  let count = 60;
+  let count = 6;
   AUDIO.loop = true;
   AUDIO.play();
   countdownInterval = setInterval(function () {
@@ -183,6 +185,8 @@ function startGame() {
   startEl.style.display = "none";
   mazeGrid.style.display = "flex";
   timerEl.style.display = "block";
+  winMessage.style.display = "none";
+  loseMessage.style.display = "none";
   createCountdownTimer(function () {
     playerLoses();
     gameOver = false;
@@ -193,13 +197,13 @@ function startGame() {
 function playerWins() {
   gameOver = true;
   AUDIO.pause();
-  alert("Congratulations! You Have Escaped The Maze!!!");
+  winMessage.style.display = "block";
   resetGame();
 }
 function playerLoses() {
   gameOver = true;
   AUDIO.pause();
-  alert("Time Is Up! Game Over! Better Luck Next Time!");
+  loseMessage.style.display = "block";
   resetGame();
 }
 // render game reset

@@ -145,3 +145,35 @@ a:hover:after {
   border-radius: 1px;
   text-shadow: rgb(94, 247, 92) 1px 2px 1px;
 }
+
+.win-message {
+  display: none;
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: rgb(51, 255, 0) 2px 2px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lose-message {
+  display: none;
+  font-family: ultraLight;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: rgb(51, 255, 0) 2px 2px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
