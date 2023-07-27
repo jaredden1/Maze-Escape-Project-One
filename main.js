@@ -167,7 +167,7 @@ cells[playerCurrentIndex].classList.add("player");
 
 // render countdown timer
 function createCountdownTimer(callback) {
-  let count = 6;
+  let count = 60;
   AUDIO.loop = true;
   AUDIO.play();
   countdownInterval = setInterval(function () {
@@ -197,13 +197,19 @@ function startGame() {
 function playerWins() {
   gameOver = true;
   AUDIO.pause();
-  winMessage.style.display = "block";
+  winMessage.style.display = 'block';
+  setTimeout(function() {
+    winMessage.style.display = 'none';
+  }, 10000);
   resetGame();
 }
 function playerLoses() {
   gameOver = true;
   AUDIO.pause();
   loseMessage.style.display = "block";
+  setTimeout(function() {
+    loseMessage.style.display = 'none';
+  }, 10000);
   resetGame();
 }
 // render game reset
