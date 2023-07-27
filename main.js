@@ -53,6 +53,7 @@ const cells = [];
 // render player start position
 let playerCurrentIndex = 28;
 let gameOver = false;
+let countdownInterval;
 
 /*----------- cached elements ------------*/
 
@@ -64,8 +65,8 @@ const playerImage = document.createElement("img");
 
 /*----------- event listeners ------------*/
 
-document.addEventListener("keydown", movePlayer);
 startBtn.addEventListener("click", startGame);
+document.addEventListener("keydown", movePlayer);
 
 /*-------------- functions ---------------*/
 
@@ -167,11 +168,11 @@ function createCountdownTimer(callback) {
   let count = 60;
   AUDIO.loop = true;
   AUDIO.play();
-  const interval = setInterval(function () {
+  countdownInterval = setInterval(function () {
     count--;
     timerEl.innerText = `00 : ${count}`;
     if (count <= 0 && !gameOver) {
-      clearInterval(interval);
+      clearInterval(countdownInterval);
       callback();
     }
   }, 1000);
@@ -187,6 +188,7 @@ function startGame() {
     gameOver = false;
   });
 }
+
 // render player win/lose
 function playerWins() {
   gameOver = true;
@@ -211,6 +213,8 @@ function resetGame() {
   mazeGrid.style.display = "none";
   //make start button visible
   startEl.style.display = "flex";
+  //clear countdown timer before reset
+  clearInterval(countdownInterval);
   //add player to its position
   cells[playerCurrentIndex].classList.add("player");
 }

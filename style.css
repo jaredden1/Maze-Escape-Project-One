@@ -69,7 +69,7 @@ a:after {
   width: 0;
   height: 100%;
   background: rgb(238, 35, 92);
-  transition: all 0.75s;
+  transition: all 1s;
 }
 
 a:hover:after {
