@@ -6,6 +6,9 @@ Name: James Redden
 
 A maze game is a type of a game where a player navigates from a starting point, through a network of paths and walls to reach a specific end point under timed conditions. Player can navigate the maze by using the arrow keys to reach the end point. If the player does not reach the end point before time runs out then the player loses and the game is over. If the player reaches the end point before time runs out player wins and game is over. Player can then choose to restart the game. 
 
+## Guidelines for how to play:
+- Use the arrow keys on your keyboard to navigate your way through the maze to reach the end before time runs out!
+
 Access my game here: 
 - Github: https://jaredden1.github.io/Maze-Escape-Project-One/
 - Netlify: https://jaredden-maze-escape.netlify.app/
@@ -13,12 +16,14 @@ Access my game here:
 ## Gameplay - Screenshots
 
 #### MVP Screenshots:
-![Alt text](image-2.png)
-![Alt text](image-1.png)
-
-#### Stretch Goal Screenshots
 ![Alt text](image.png)
+First screen contains instructions and "play game" button. Click "play game" button to start the game.
 ![Alt text](image-4.png)
+Game screen, contains the maze, timer and player icon. In this screen player can navigate through the maze using arrow keys. Also added audio.
+![Alt text](image-1.png)
+Win message if player escapes the maze before time runs out.  
+![Alt text](image-2.png)
+Lose message if player doesn't escape the maze on time! Player also has the ability to restart game by clicking "play game" button.
 
 ## Technologies Used
 
