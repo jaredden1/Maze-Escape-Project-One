@@ -167,7 +167,7 @@ cells[playerCurrentIndex].classList.add("player");
 
 // render countdown timer
 function createCountdownTimer(callback) {
-  let count = 60;
+  let count = 45;
   AUDIO.loop = true;
   AUDIO.play();
   countdownInterval = setInterval(function () {
