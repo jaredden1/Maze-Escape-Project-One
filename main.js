@@ -4,16 +4,17 @@ console.log("js:loaded");
 // Audio file
 const AUDIO = new Audio("mixkit-game-level-music-689.wav");
 
-//player start position
+// Player start position
 const width = 28;
 
-// render maze layout array.
+// Maze layout array.
 // path = 0
 // wall = 1
 // start = 2
 // end = 3
 // startTxt = 4
 // endTxt = 5
+
 
 const gridLayout = [
   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -50,7 +51,7 @@ const cells = [];
 
 /*----------- state variables ------------*/
 
-// render player start position
+// Render player start position
 let playerCurrentIndex = 28;
 let gameOver = false;
 let countdownInterval;
@@ -77,13 +78,13 @@ AUDIO.addEventListener("ended", function () {
   AUDIO.currentTime = 0;
 });
 
-// render maze layout
+// Render maze layout
 function createMaze() {
   for (let i = 0; i < gridLayout.length; i++) {
     const cell = document.createElement("div");
     mazeGrid.appendChild(cell);
     cells.push(cell);
-    // add class to cell based on value in gridLayout to create paths, wall, etc.
+    // Add class to cell based on value in gridLayout to create paths, wall, etc.
     if (gridLayout[i] === 0) {
       cells[i].classList.add("path");
     } else if (gridLayout[i] === 1) {
@@ -108,11 +109,11 @@ function createMaze() {
 
 createMaze();
 
-// render player movement with arrow keys
+// Player movement with arrow keys
 function movePlayer(event) {
   cells[playerCurrentIndex].classList.remove("player");
 
-  //render player movement based on arrow key pressed.
+  // Player movement based on arrow key pressed.
   switch (event.key) {
     case "ArrowUp":
       if (
@@ -149,25 +150,25 @@ function movePlayer(event) {
     default:
       break;
   }
-  //Check if player has reached the end of maze
+  // Check if player has reached the end of maze
   if (gridLayout[playerCurrentIndex] === 3) {
     playerWins();
     return;
   }
-  //Add player back to new position
+  // Add player back to new position
   cells[playerCurrentIndex].classList.add("player");
 }
 
-// render player and added an image for player
+// Render player and added an image for player
 playerImage.src = "./playerImg.png";
 playerImage.classList.add("player");
 
 cells[playerCurrentIndex].appendChild(playerImage);
 cells[playerCurrentIndex].classList.add("player");
 
-// render countdown timer
+// Countdown timer
 function createCountdownTimer(callback) {
-  let count = 45;
+  let count = 30;
   AUDIO.loop = true;
   AUDIO.play();
   countdownInterval = setInterval(function () {
@@ -180,7 +181,7 @@ function createCountdownTimer(callback) {
   }, 1000);
 }
 
-// render start game
+// Start game 
 function startGame() {
   startEl.style.display = "none";
   mazeGrid.style.display = "flex";
@@ -193,7 +194,7 @@ function startGame() {
   });
 }
 
-// render player win/lose
+// Player win/lose
 function playerWins() {
   gameOver = true;
   AUDIO.pause();
@@ -212,19 +213,19 @@ function playerLoses() {
   }, 6000);
   resetGame();
 }
-// render game reset
+// Render game reset
 function resetGame() {
-  //remove player from current position
+  // remove player from current position
   cells[playerCurrentIndex].classList.remove("player");
-  //resets player back to beginning position
+  // resets player back to beginning position
   playerCurrentIndex = 28;
-  //hide countdown timer, maze grid
+  // hide countdown timer, maze grid
   timerEl.style.display = "none";
   mazeGrid.style.display = "none";
-  //make start button visible
+  // make start button visible
   startEl.style.display = "flex";
-  //clear countdown timer before reset
+  // clear countdown timer before reset
   clearInterval(countdownInterval);
-  //add player to its position
+  // add player to its position
   cells[playerCurrentIndex].classList.add("player");
 }
